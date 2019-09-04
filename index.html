@@ -1,13 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Snake Game</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calendar</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <header>
+        <div class="buttons-wrapper">
+            <button id="modal-fast-event-add">Add</button>
+            <div id="modal-fast-event">
+                <i class="cor"></i>
+                <button id="modal-fast-event-close">x</button>
+                <div id="modal-fast-event-selector-wrapper">
+                    <select id="modal-fast-event-selector-year"></select>
+                    <select id="modal-fast-event-selector-month"></select>
+                    <select id="modal-fast-event-selector-day"></select>
+                </div>
+                <input type="text" placeholder="event" id="modal-fast-event-info">
+                <button id="modal-fast-event-create">create</button>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <input type="text" id="search" placeholder="Event, date or participant" autocomplete="off">
+            <ul id="search-events"></ul>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="calendar-wrapper">
+
+            <span class="date-pick-wrapper">
+                <button id="prev-button">prev</button>
+                <div id="date-show"></div>
+
+                <button id="next-button">next</button>
+
+                <button id="today">Today</button>
+            </span>
+
+
+            <div id="modal-date-pick">
+                <i class="cor"></i>
+                <button id="modal-date-pick-close">x</button>
+                <input type="text" placeholder="Event" id="modal-date-pick-event" required>
+                <input type="text" placeholder="Participant's names" id="modal-date-pick-names">
+                <textarea placeholder="Description" id="modal-date-pick-description"></textarea>
+                <div>
+                    <button id="modal-date-pick-done">Create</button>
+                    <button id="modal-date-pick-delete">Delete</button>
+                </div>
+            </div>
+
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Mo</th>
+                        <th>Tu</th>
+                        <th>We</th>
+                        <th>Th</th>
+                        <th>Fr</th>
+                        <th>Sa</th>
+                        <th>Su</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+            <div class="dayOfWeek">
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
